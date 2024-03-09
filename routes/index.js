@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
 
 /*
@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
 });
 */
 
-router.use('/', express.static('public'));
+const path = reuqire('path')
+router.use('/', express.static(path.join(__dirname, 'public')))
 
-module.exports = router;
+module.exports = router
