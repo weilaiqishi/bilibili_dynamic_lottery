@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 */
 
-const path = reuqire('path')
+const path = require('path')
 router.use('/', express.static(path.join(__dirname, 'public')))
 
 module.exports = router
