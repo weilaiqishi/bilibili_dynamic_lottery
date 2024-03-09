@@ -1,4 +1,4 @@
-const BACKEND_URL = document.location.href + 'dynamic/';
+const BACKEND_URL = document.location.origin + '/' + 'dynamic/';
 
 const BILIBILI_URL = 'bilibili.com/opus';
 const BILIBILI_URL_OLD = 't.bilibili.com';

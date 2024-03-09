@@ -6,6 +6,11 @@ var bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const cors = require('cors');
+app.use(cors({
+	origin: '*'
+}));
+
 var index = require('./routes/index');
 var dynamic= require('./routes/dynamic');
 
