@@ -5,19 +5,20 @@ const express = require('express');
 var bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const path = require('path')
 
 const cors = require('cors');
 app.use(cors({
 	origin: '*'
 }));
 
-var index = require('./routes/index');
 var dynamic= require('./routes/dynamic');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', index);
+
 app.use('/dynamic', dynamic);
 
 app.listen(PORT, function(){
